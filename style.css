@@ -1,0 +1,232 @@
+:root {
+	--primaryColor: hsl(218, 80%, 2%);
+	--formbgColor:hsl(219, 10%, 10%);
+	--inputbgColor:hsl(240, 3%, 13%);
+	--secondaryColor: hsl(218, 20%, 98%);
+	--accentColor: hsl(44, 99%, 54%);
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	color: var(--secondaryColor);
+}
+
+.caution {
+	display: inline;
+	position: relative;
+	border: 1px solid red;
+	font-size: 0.8rem;
+}
+
+body {
+	margin: 15px;
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--primaryColor);
+}
+
+
+section {
+	display: flex;
+	flex-direction: row;
+	min-height: 100vh;
+	margin: 0px 6vw;
+
+}
+
+hr {
+	position: absolute;
+	margin-left: 10vw;
+	width: 80vw;
+	border: 2px solid var(--accentColor);
+}
+
+.salutations {
+	color: var(--accentColor);
+	font-size: 3rem;
+}
+
+.aboutMe{
+	align-items: center;
+	justify-content: space-between;
+}
+
+.myInfo {
+	width: 40vw
+}
+
+.overlays {
+	position: relative;
+}
+
+.pfp {
+	height: 67vh;
+	width: auto;
+}
+
+.gradient {
+	width: 67vh;
+	position: absolute;
+	background-image: linear-gradient(hsla(218, 80%, 2%, 0), hsla(218, 80%, 2%, 0), var(--primaryColor));
+	z-index: 1;
+}
+
+
+
+.toolsAndSkills{
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+.skillannounce,
+.wannaplay {
+	margin-top: 15vh;
+	font-size: 2.5rem;
+}
+
+.mySkills {
+	width: 50vw;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items: center;
+	margin-bottom: 23vh;
+}
+
+.mySkills li{
+	padding: 1vh 1vw;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.comMedium{
+	display: flex;
+	width: 95vw;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.form{
+	margin:0vh 10vw 0vh 10vw;
+	padding: 30px;
+	width: 40vw;
+	/* min-height: 200px; */
+}
+
+.form{
+	background-color: var(--formbgColor);
+	margin: 5px ;
+}
+
+
+#Name, #Email, #Subject, #Message{
+	margin: 5px ;
+	border-radius: 1em;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--inputbgColor);
+	border:none;
+	padding-left: 1em;
+	padding: 1% 1%;
+	
+}
+
+input[id="Name"]{
+	width:11vw;
+	padding-left: 1em;
+}
+input[id="Email"]{
+	width:13vw;
+}
+input[id="Subject"]{
+	width:33vw;
+}
+
+textarea{
+	width:39vw;
+}
+
+input[type="submit"]{
+	display: block;
+	border: none;
+	border-radius: 0.5em ;
+	margin : 0 auto;
+	margin-top: 1%;
+	padding: 0.5em  1em;
+	font-size: 14px;
+	font-weight: 700;
+	color : var(--primaryColor);
+	background-color: var(--accentColor);
+}
+
+.contactInfo{
+	margin: 40vh 0vw 20vh 0vw;
+}
+
+.contactInfo ul{
+	list-style: none;
+}
+
+.contactInfo ul{
+	width: 95vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden.left{
+	opacity: 0;
+	filter:blur(3px);
+	translate: -7vw 0vh;
+	transition: 1s;
+}
+.hidden.right{
+	filter:blur(3px);
+	opacity: 0;
+	translate: 7vw 0vh;
+	transition: 1s;
+}
+.hidden.center{
+	filter:blur(3px);
+	opacity: 0;
+	transition: 1s;
+}
+
+hr.hidden{
+	color: linear-gradient(--primaryColor,--accentColor,--primaryColor);
+	
+}
+
+
+.show.hidden{
+	opacity: 1;
+	translate: 0vw 0vh;
+	filter:blur(0px);
+
+}
+
+hr.hidden.show{
+	color: var(--accentColor)
+}
+
+
